@@ -17,7 +17,7 @@
         "url": "https://github.com/Logerfo"
     },
     "icon": "icon.png",
-    "license": "Unlicense",
+    "license": "MIT",
     "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
     "repository": {
         "type": "git",
