@@ -16,6 +16,7 @@
         "name": "Bruno Logerfo",
         "url": "https://github.com/Logerfo"
     },
+    "icon": "icon.png",
     "license": "Unlicense",
     "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
     "repository": {
