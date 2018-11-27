@@ -1,0 +1,101 @@
+{
+    "name": "gitlab-notifications",
+    "displayName": "Gitlab Notifications",
+    "description": "A status bar icon that notifies you about notifications on Gitlab.",
+    "version": "0.0.1",
+    "publisher": "logerfo",
+    "engines": {
+        "vscode": "^1.29.0"
+    },
+    "bugs": {
+        "url": "https://github.com/Logerfo/gitlab-notifications/issues",
+        "email": "bruno@logerfo.tk"
+    },
+    "author": {
+        "email": "bruno@logerfo.tk",
+        "name": "Bruno Logerfo",
+        "url": "https://github.com/Logerfo"
+    },
+    "license": "Unlicense",
+    "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Logerfo/gitlab-notifications.git"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": [
+            {
+                "type": "object",
+                "title": "Gitlab Notifications",
+                "properties": {
+                    "gitlab-notifications.refreshInterval": {
+                        "type": "number",
+                        "description": "Amount of seconds to wait before each refresh",
+                        "default": 300
+                    },
+                    "gitlab-notifications.privateToken": {
+                        "type": "string",
+                        "description": "Private token used for requesting the notifications",
+                        "default": ""
+                    },
+                    "gitlab-notifications.alignment": {
+                        "type": "string",
+                        "description": "Icon's position in the statusbar (left/right)",
+                        "default": "right"
+                    },
+                    "gitlab-notifications.hideIfNone": {
+                        "type": "boolean",
+                        "description": "Hide the icon if there are no notifications",
+                        "default": true
+                    },
+                    "gitlab-notifications.showNumberOfNotifications": {
+                        "type": "boolean",
+                        "description": "Show the number of notifications alongside the icon",
+                        "default": true
+                    },
+                    "gitlab-notifications.url": {
+                        "type": "string",
+                        "description": "Gitlab URL",
+                        "default": "https://gitlab.com/"
+                    }
+                }
+            }
+        ],
+        "commands": [
+            {
+                "command": "gitlab-notifications.refresh",
+                "title": "Gitlab Notifications: Refresh"
+            },
+            {
+                "command": "gitlab-notifications.openInBrowser",
+                "title": "Gitlab Notifications: Open in Browser"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "dependencies": {
+        "lodash": "^4.17.11",
+        "pify": "^3.0.0",
+        "request": "^2.81.0"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.21"
+    }
+}
