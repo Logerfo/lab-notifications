@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import Utils from './utils';
+import Config from './config';
 import statusbar from './statusbar';
 
 async function refresh(showNotification = true) {
@@ -10,7 +11,7 @@ async function refresh(showNotification = true) {
 }
 
 function openInBrowser() {
-    const url = `${(this.config.url as string).replace(/\/$/, "")}/dashboard/todos`;
+    const url = `${(Config.get().url as string).replace(/\/$/, "")}/dashboard/todos`;
     vscode.commands.executeCommand('vscode.open', vscode.Uri.parse(url));
     Utils.state.update('didOpenInBrowser', true);
 }
