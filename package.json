@@ -49,7 +49,11 @@
                     "gitlab-notifications.alignment": {
                         "type": "string",
                         "description": "Icon's position in the statusbar (left/right)",
-                        "default": "right"
+                        "default": "right",
+                        "enum": [
+                            "left",
+                            "right"
+                        ]
                     },
                     "gitlab-notifications.hideIfNone": {
                         "type": "boolean",
