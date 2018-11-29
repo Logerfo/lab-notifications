@@ -30,6 +30,7 @@ If you're using `gitlab.com`, you don't have to set it.
     "gitlab-notifications.hideIfNone": true, // true/false
     "gitlab-notifications.refreshInterval": 300, // seconds
     "gitlab-notifications.showNumberOfNotifications": true, // true/false
+    "gitlab-notifications.color": ""
 }
 ```
 

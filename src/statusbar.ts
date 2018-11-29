@@ -5,7 +5,7 @@ import Config from './config';
 import Utils from './utils';
 
 class Statusbar {
-    bell;
+    bell: vscode.StatusBarItem;
     config;
     all = 0;
 
@@ -31,6 +31,7 @@ class Statusbar {
 
         await this.updateState(force);
         this.updateText();
+        this.updateColor();
         this.updateTooltip();
         this.updateVisibility();
     }
@@ -53,6 +54,11 @@ class Statusbar {
 
     updateText() {
         this.bell.text = this.all ? `$(checklist) ${this.all}` : `$(checklist)`;
+    }
+
+    updateColor() {
+        const { color } = this.config;
+        this.bell.color = this.all ? color : '';
     }
 
     updateTooltip() {

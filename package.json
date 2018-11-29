@@ -55,6 +55,11 @@
                             "right"
                         ]
                     },
+                    "gitlab-notifications.color": {
+                        "type": "string",
+                        "description": "Icon's color when there are some notifications",
+                        "default": ""
+                    },
                     "gitlab-notifications.hideIfNone": {
                         "type": "boolean",
                         "description": "Hide the icon if there are no notifications",
