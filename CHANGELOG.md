@@ -11,3 +11,6 @@ Fixed crash when opening in browser.
 New configuration: `gitlab-notifications.color`.  
 The `gitlab-notifications.aligment` configuration is now an enum.  
 Added installation steps to the "readme".  
+
+## 0.0.4
+New statusbar icon.
