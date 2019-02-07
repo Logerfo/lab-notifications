@@ -20,7 +20,7 @@ class Statusbar {
         const config = Config.get();
         const alignment = config.alignment === 'left' ? vscode.StatusBarAlignment.Left : vscode.StatusBarAlignment.Right;
         this.bell = vscode.window.createStatusBarItem(alignment, -Infinity);
-        this.bell.text = `$(checklist)`;
+        this.bell.text = `$(tasklist)`;
         this.bell.command = 'gitlab-notifications.openInBrowser';
     }
 

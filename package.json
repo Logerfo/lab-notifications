@@ -5,7 +5,7 @@
     "version": "0.0.3",
     "publisher": "logerfo",
     "engines": {
-        "vscode": "^1.29.0"
+        "vscode": "^1.31.0"
     },
     "bugs": {
         "url": "https://github.com/Logerfo/gitlab-notifications/issues",
