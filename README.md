@@ -25,7 +25,7 @@ You can get your token [here](https://gitlab.com/profile/personal_access_tokens)
 If you're using `gitlab.com`, you don't have to set it.
 
 ### Customizing
-```json
+```jsonc
 {
     "gitlab-notifications.aligment": "right", // left/right
     "gitlab-notifications.hideIfNone": true, // true/false
