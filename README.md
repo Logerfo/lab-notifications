@@ -5,6 +5,7 @@
 [![Known Vulnerabilities](https://snyk.io/test/github/logerfo/gitlab-notifications/badge.svg)](https://snyk.io/test/github/logerfo/gitlab-notifications)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FLogerfo%2Fgitlab-notifications.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FLogerfo%2Fgitlab-notifications?ref=badge_shield)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Logerfo/gitlab-notifications.svg)](https://greenkeeper.io/)
+[![Dependencies Status](https://david-dm.org/logerfo/gitlab-notifications/dev-status.svg)](https://david-dm.org/logerfo/gitlab-notifications?type=dev)
 
 # Gitlab notifications
 This extension is based on a [similar work](https://github.com/fabiospampinato/vscode-github-notifications-bell) by [@fabiospampinato](https://github.com/fabiospampinato).
