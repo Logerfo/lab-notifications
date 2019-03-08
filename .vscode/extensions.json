@@ -3,6 +3,7 @@
 	// for the documentation about the extensions.json format
 	"recommendations": [
 		"eg2.tslint",
-		"ban.spellright"
+		"ban.spellright",
+		"eamodio.tsl-problem-matcher"
 	]
 }
