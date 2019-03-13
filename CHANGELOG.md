@@ -14,3 +14,7 @@ Added installation steps to the "readme".
 
 ## 0.0.4
 New statusbar icon.
+
+## 0.0.5
+New extension icon (based on the new status bar icon).  
+Performance improvements.
