@@ -108,6 +108,6 @@
         "typescript": "3.3.3333",
         "vscode": "1.1.30",
         "webpack": "4.29.6",
-        "webpack-cli": "3.2.3"
+        "webpack-cli": "3.3.0"
     }
 }
