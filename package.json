@@ -102,7 +102,7 @@
     },
     "devDependencies": {
         "@types/mocha": "5.2.6",
-        "@types/node": "11.13.1",
+        "@types/node": "11.13.2",
         "ts-loader": "5.3.3",
         "tslint": "5.15.0",
         "typescript": "3.4.2",
