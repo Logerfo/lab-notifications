@@ -104,7 +104,7 @@
         "@types/mocha": "5.2.6",
         "@types/node": "11.13.4",
         "ts-loader": "5.3.3",
-        "tslint": "5.15.0",
+        "tslint": "5.16.0",
         "typescript": "3.4.3",
         "vscode": "1.1.33",
         "webpack": "4.30.0",
