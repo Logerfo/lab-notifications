@@ -53,7 +53,7 @@ class Statusbar {
     }
 
     updateText() {
-        this.bell.text = this.all ? `$(checklist) ${this.all}` : `$(checklist)`;
+        this.bell.text = this.all ? `$(tasklist) ${this.all}` : `$(tasklist)`;
     }
 
     updateColor() {
