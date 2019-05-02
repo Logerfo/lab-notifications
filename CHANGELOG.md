@@ -18,3 +18,6 @@ New statusbar icon.
 ## 0.0.5
 New extension icon (based on the new status bar icon).  
 Performance improvements.
+
+## 0.0.6
+Fixed wrong statusbar icon.
