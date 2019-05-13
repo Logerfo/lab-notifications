@@ -87,7 +87,15 @@
                 "command": "gitlab-notifications.openInBrowser",
                 "title": "Gitlab Notifications: Open in Browser"
             }
-        ]
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "gitlab-notifications.openInBrowser",
+                    "when": "false"
+                }
+            ]
+        }
     },
     "scripts": {
         "vscode:prepublish": "webpack --mode production",
