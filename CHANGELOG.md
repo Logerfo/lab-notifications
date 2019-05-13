@@ -21,3 +21,6 @@ Performance improvements.
 
 ## 0.0.6
 Fixed wrong statusbar icon.
+
+## 0.0.7
+Removed the command from the palette.

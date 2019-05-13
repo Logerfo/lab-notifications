@@ -2,7 +2,7 @@
     "name": "gitlab-notifications",
     "displayName": "Gitlab Notifications",
     "description": "A status bar icon that notifies you about notifications on Gitlab.",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "logerfo",
     "engines": {
         "vscode": "^1.31.0"
