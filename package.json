@@ -1,121 +1,125 @@
 {
-    "name": "gitlab-notifications",
-    "displayName": "Gitlab Notifications",
-    "description": "A status bar icon that notifies you about notifications on Gitlab.",
-    "version": "0.0.7",
-    "publisher": "logerfo",
-    "engines": {
-        "vscode": "^1.31.0"
-    },
-    "bugs": {
-        "url": "https://github.com/Logerfo/gitlab-notifications/issues",
-        "email": "bruno@logerfo.tk"
-    },
-    "author": {
-        "email": "bruno@logerfo.tk",
-        "name": "Bruno Logerfo",
-        "url": "https://github.com/Logerfo"
-    },
-    "icon": "icon.png",
-    "license": "MIT",
-    "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Logerfo/gitlab-notifications.git"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "*"
-    ],
-    "main": "./out/extension",
-    "contributes": {
-        "configuration": [
-            {
-                "type": "object",
-                "title": "Gitlab Notifications",
-                "properties": {
-                    "gitlab-notifications.refreshInterval": {
-                        "type": "number",
-                        "description": "Amount of seconds to wait before each refresh",
-                        "default": 300
-                    },
-                    "gitlab-notifications.privateToken": {
-                        "type": "string",
-                        "description": "Private token used for requesting the notifications",
-                        "default": ""
-                    },
-                    "gitlab-notifications.alignment": {
-                        "type": "string",
-                        "description": "Icon's position in the statusbar (left/right)",
-                        "default": "right",
-                        "enum": [
-                            "left",
-                            "right"
-                        ]
-                    },
-                    "gitlab-notifications.color": {
-                        "type": "string",
-                        "description": "Icon's color when there are some notifications",
-                        "default": ""
-                    },
-                    "gitlab-notifications.hideIfNone": {
-                        "type": "boolean",
-                        "description": "Hide the icon if there are no notifications",
-                        "default": true
-                    },
-                    "gitlab-notifications.showNumberOfNotifications": {
-                        "type": "boolean",
-                        "description": "Show the number of notifications alongside the icon",
-                        "default": true
-                    },
-                    "gitlab-notifications.url": {
-                        "type": "string",
-                        "description": "Gitlab URL",
-                        "default": "https://gitlab.com/"
-                    }
-                }
-            }
-        ],
-        "commands": [
-            {
-                "command": "gitlab-notifications.refresh",
-                "title": "Gitlab Notifications: Refresh"
-            },
-            {
-                "command": "gitlab-notifications.openInBrowser",
-                "title": "Gitlab Notifications: Open in Browser"
-            }
-        ],
-        "menus": {
-            "commandPalette": [
-                {
-                    "command": "gitlab-notifications.openInBrowser",
-                    "when": "false"
-                }
+  "name": "gitlab-notifications",
+  "displayName": "Gitlab Notifications",
+  "description": "A status bar icon that notifies you about notifications on Gitlab.",
+  "version": "0.0.7",
+  "publisher": "logerfo",
+  "engines": {
+    "vscode": "^1.31.0"
+  },
+  "bugs": {
+    "url": "https://github.com/Logerfo/gitlab-notifications/issues",
+    "email": "bruno@logerfo.tk"
+  },
+  "author": {
+    "email": "bruno@logerfo.tk",
+    "name": "Bruno Logerfo",
+    "url": "https://github.com/Logerfo"
+  },
+  "icon": "icon.png",
+  "license": "MIT",
+  "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Logerfo/gitlab-notifications.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "configuration": [
+      {
+        "type": "object",
+        "title": "Gitlab Notifications",
+        "properties": {
+          "gitlab-notifications.refreshInterval": {
+            "type": "number",
+            "description": "Amount of seconds to wait before each refresh",
+            "default": 300
+          },
+          "gitlab-notifications.privateToken": {
+            "type": "string",
+            "description": "Private token used for requesting the notifications",
+            "default": ""
+          },
+          "gitlab-notifications.alignment": {
+            "type": "string",
+            "description": "Icon's position in the statusbar (left/right)",
+            "default": "right",
+            "enum": [
+              "left",
+              "right"
             ]
+          },
+          "gitlab-notifications.color": {
+            "type": "string",
+            "description": "Icon's color when there are some notifications",
+            "default": ""
+          },
+          "gitlab-notifications.hideIfNone": {
+            "type": "boolean",
+            "description": "Hide the icon if there are no notifications",
+            "default": true
+          },
+          "gitlab-notifications.showNumberOfNotifications": {
+            "type": "boolean",
+            "description": "Show the number of notifications alongside the icon",
+            "default": true
+          },
+          "gitlab-notifications.url": {
+            "type": "string",
+            "description": "Gitlab URL",
+            "default": "https://gitlab.com/"
+          }
         }
-    },
-    "scripts": {
-        "vscode:prepublish": "webpack --mode production",
-        "compile": "webpack --mode none",
-        "watch": "webpack --mode none --watch",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "dependencies": {
-        "lodash": "^4.17.11",
-        "pify": "^4.0.1",
-        "request": "^2.81.0"
-    },
-    "devDependencies": {
-        "@types/mocha": "5.2.7",
-        "@types/node": "11.13.9",
-        "ts-loader": "6.0.4",
-        "tslint": "5.18.0",
-        "typescript": "3.5.2",
-        "vscode": "1.1.35",
-        "webpack": "4.35.2",
-        "webpack-cli": "3.3.5"
+      }
+    ],
+    "commands": [
+      {
+        "command": "gitlab-notifications.refresh",
+        "title": "Gitlab Notifications: Refresh"
+      },
+      {
+        "command": "gitlab-notifications.openInBrowser",
+        "title": "Gitlab Notifications: Open in Browser"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "gitlab-notifications.openInBrowser",
+          "when": "false"
+        }
+      ]
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "webpack --mode production",
+    "compile": "webpack --mode none",
+    "watch": "webpack --mode none --watch",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "pify": "^4.0.1",
+    "request": "^2.81.0",
+    "snyk": "^1.189.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "5.2.7",
+    "@types/node": "11.13.9",
+    "ts-loader": "6.0.4",
+    "tslint": "5.18.0",
+    "typescript": "3.5.2",
+    "vscode": "1.1.35",
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5"
+  },
+  "snyk": true
 }
