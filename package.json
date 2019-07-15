@@ -109,7 +109,7 @@
     "lodash": "^4.17.11",
     "pify": "^4.0.1",
     "request": "^2.81.0",
-    "snyk": "^1.189.0"
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "@types/mocha": "5.2.7",
