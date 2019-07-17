@@ -117,7 +117,7 @@
     "tslint": "5.18.0",
     "typescript": "3.5.3",
     "@types/vscode": "1.31.0",
-    "webpack": "4.36.0",
+    "webpack": "4.36.1",
     "webpack-cli": "3.3.6"
   },
   "snyk": true
