@@ -26,9 +26,9 @@ class Statusbar {
 
     async update(force?) {
         this.config = Config.get();
-        if (!this.config.privateToken)
+        if (!this.config.privateToken) {
             return vscode.window.showErrorMessage('You need to provide a private token via the "gitlab-notifications.privateToken" setting');
-
+        }
         await this.updateState(force);
         this.updateText();
         this.updateColor();
