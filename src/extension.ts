@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
     return statusbar.init();
 }
 
-function onDidChangeWindowState(event) {
+function onDidChangeWindowState(event : vscode.WindowState) {
     if (event.focused && Utils.state.get('didOpenInBrowser', false)) {
         Utils.state.update('didOpenInBrowser', false);
         refresh(false);

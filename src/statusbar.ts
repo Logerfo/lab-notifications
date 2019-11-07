@@ -6,11 +6,11 @@ import Utils from './utils';
 
 class Statusbar {
     bell: vscode.StatusBarItem;
-    config;
+    config: { color?: string; hideIfNone?: boolean; privateToken?: string; refreshInterval?: number; url?: string; };
     all = 0;
 
     async init() {
-        await this.initBell();
+        this.initBell();
         this.update();
         vscode.workspace.onDidChangeConfiguration(this.update.bind(this));
         setInterval(this.update.bind(this), 30000);
@@ -24,7 +24,7 @@ class Statusbar {
         this.bell.command = 'gitlab-notifications.openInBrowser';
     }
 
-    async update(force?) {
+    async update(force?: boolean) {
         this.config = Config.get();
         if (!this.config.privateToken) {
             return vscode.window.showErrorMessage('You need to provide a private token via the "gitlab-notifications.privateToken" setting');
@@ -36,7 +36,7 @@ class Statusbar {
         this.updateVisibility();
     }
 
-    async updateState(force?) {
+    async updateState(force?: boolean) {
         if (force || (Date.now() - Utils.state.get('date', 0)) >= (this.config.refreshInterval * 1000)) { // Refresh
             await Utils.state.update('date', Date.now());
             try {
