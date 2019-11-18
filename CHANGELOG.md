@@ -4,14 +4,14 @@
 Removed the command from the palette.
 
 ## 0.0.6 - 2019-05-02
-Fixed wrong statusbar icon.
+Fixed wrong status bar icon.
 
 ## 0.0.5 - 2019-03-13
 New extension icon (based on the new status bar icon).  
 Performance improvements.
 
 ## 0.0.4 - 2019-02-07
-New statusbar icon.
+New status bar icon.
 
 ## 0.0.3 - 2018-11-29
 New configuration: `gitlab-notifications.color`.  
