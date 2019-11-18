@@ -8,6 +8,7 @@ class Statusbar {
     bell: vscode.StatusBarItem;
     config: { color?: string; hideIfNone?: boolean; privateToken?: string; refreshInterval?: number; url?: string; };
     all = 0;
+    token?: string;
 
     async init() {
         this.initBell();
@@ -26,8 +27,9 @@ class Statusbar {
 
     async update(force?: boolean) {
         this.config = Config.get();
-        if (!this.config.privateToken) {
-            return vscode.window.showErrorMessage('You need to provide a private token via the "gitlab-notifications.privateToken" setting');
+        this.token = this.config.privateToken || process.env.GITLAB_NOTIFICATIONS_TOKEN;
+        if (!this.token) {
+            return vscode.window.showErrorMessage('You need to provide a private token via the "gitlab-notifications.privateToken" setting or the "GITLAB_NOTIFICATIONS_TOKEN" environment variable');
         }
         await this.updateState(force);
         this.updateText();
@@ -41,7 +43,7 @@ class Statusbar {
             await Utils.state.update('date', Date.now());
             try {
                 const headers = {
-                    "PRIVATE-TOKEN": this.config.privateToken
+                    "PRIVATE-TOKEN": this.token
                 };
                 const result = await Promise.all([
                     pify(request)({ url: `${(this.config.url as string).replace(/\/$/, "")}/api/v4/todos`, headers })

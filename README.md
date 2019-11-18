@@ -16,7 +16,8 @@ This extension is based on a [similar work](https://github.com/fabiospampinato/v
     "gitlab-notifications.privateToken": "YOUR-TOKEN"
 }
 ```
-You can get your token [here](https://gitlab.com/profile/personal_access_tokens).
+You can get your token [here](https://gitlab.com/profile/personal_access_tokens).  
+You can provide your OAuth token also by setting an environment variable named: GITLAB_NOTIFICATIONS_TOKEN.
 
 ### If you're using a self-hosted server, set the URL
 ```json
