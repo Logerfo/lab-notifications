@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.8 - 2019-11-18
+Added support for token as environment variable (fixes #23).
+
 ## 0.0.7 - 2019-05-13
 Removed the command from the palette.
 
