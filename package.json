@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Logerfo/gitlab-notifications.git"
+    "url": "https://github.com/Logerfo/gitlab-notifications.git"
   },
   "categories": [
     "Other"
