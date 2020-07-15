@@ -113,7 +113,7 @@
   "devDependencies": {
     "@types/mocha": "8.0.0",
     "@types/node": "11.13.9",
-    "ts-loader": "8.0.0",
+    "ts-loader": "8.0.1",
     "tslint": "6.1.2",
     "typescript": "3.9.6",
     "@types/vscode": "1.31.0",
