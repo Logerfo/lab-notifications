@@ -111,7 +111,7 @@
     "snyk": "^1.316.1"
   },
   "devDependencies": {
-    "@types/mocha": "8.2.2",
+    "@types/mocha": "8.2.3",
     "@types/node": "14.17.4",
     "ts-loader": "9.2.3",
     "tslint": "6.1.3",
