@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 - 2023-08-26
+Changed the extension name to Lab Notifications.  
+Changed the extension icon.  
+These changes were requested by GitLab for intellectual property reasons. See #34 for more information.  
+The name change implies in breaking changes in URLs and settings. Just remove the "git" prefix and you're good to go. GitHub will keep old references. The token environment variable still works for both old and new names, prioritizing the new one.
+
 ## 0.0.8 - 2019-11-18
 Added support for token as environment variable (fixes #23).
 
@@ -17,8 +23,8 @@ Performance improvements.
 New status bar icon.
 
 ## 0.0.3 - 2018-11-29
-New configuration: `gitlab-notifications.color`.  
-The `gitlab-notifications.aligment` configuration is now an enum.  
+New configuration: `lab-notifications.color`.  
+The `lab-notifications.aligment` configuration is now an enum.  
 Added installation steps to the "readme".  
 
 ## 0.0.2 - 2018-11-27

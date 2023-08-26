@@ -6,7 +6,7 @@ const Utils = {
     state: <vscode.Memento>null,
 
     initCommands(context: vscode.ExtensionContext) {
-        const { commands } = vscode.extensions.getExtension('logerfo.gitlab-notifications').packageJSON.contributes;
+        const { commands } = vscode.extensions.getExtension('logerfo.lab-notifications').packageJSON.contributes;
         commands.forEach(({ command, title }) => context.subscriptions.push(vscode.commands.registerCommand(command, () => Commands[_.last(command.split('.')) as string]())));
         return Commands;
     }
