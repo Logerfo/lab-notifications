@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 const Config = {
     get() {
-        return vscode.workspace.getConfiguration().get('gitlab-notifications') as any;
+        return vscode.workspace.getConfiguration().get('lab-notifications') as any;
     }
 };
 

@@ -6,7 +6,7 @@ import statusbar from './statusbar';
 async function refresh(showNotification = true) {
     await statusbar.update(true);
     if (showNotification) {
-        vscode.window.showInformationMessage(`Gitlab Notifications refreshed. ${Utils.state.get('all', 0)} Notifications.`);
+        vscode.window.showInformationMessage(`Lab Notifications refreshed. ${Utils.state.get('all', 0)} Notifications.`);
     }
 }
 

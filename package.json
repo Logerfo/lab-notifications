@@ -1,14 +1,14 @@
 {
-  "name": "gitlab-notifications",
-  "displayName": "Gitlab Notifications",
-  "description": "A status bar icon that notifies you about notifications on Gitlab.",
-  "version": "0.0.8",
+  "name": "lab-notifications",
+  "displayName": "Lab Notifications",
+  "description": "A status bar icon that notifies you about notifications on GitLab.",
+  "version": "1.0.0",
   "publisher": "logerfo",
   "engines": {
     "vscode": "^1.31.0"
   },
   "bugs": {
-    "url": "https://github.com/Logerfo/gitlab-notifications/issues",
+    "url": "https://github.com/Logerfo/lab-notifications/issues",
     "email": "bruno@logerfo.tk"
   },
   "author": {
@@ -18,10 +18,10 @@
   },
   "icon": "icon.png",
   "license": "MIT",
-  "homepage": "https://github.com/Logerfo/gitlab-notifications/blob/master/README.md",
+  "homepage": "https://github.com/Logerfo/lab-notifications/blob/master/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Logerfo/gitlab-notifications.git"
+    "url": "https://github.com/Logerfo/lab-notifications.git"
   },
   "categories": [
     "Other"
@@ -34,19 +34,19 @@
     "configuration": [
       {
         "type": "object",
-        "title": "Gitlab Notifications",
+        "title": "Lab Notifications",
         "properties": {
-          "gitlab-notifications.refreshInterval": {
+          "lab-notifications.refreshInterval": {
             "type": "number",
             "description": "Amount of seconds to wait before each refresh",
             "default": 300
           },
-          "gitlab-notifications.privateToken": {
+          "lab-notifications.privateToken": {
             "type": "string",
             "description": "Private token used for requesting the notifications",
             "default": ""
           },
-          "gitlab-notifications.alignment": {
+          "lab-notifications.alignment": {
             "type": "string",
             "description": "Icon's position in the statusbar (left/right)",
             "default": "right",
@@ -55,22 +55,22 @@
               "right"
             ]
           },
-          "gitlab-notifications.color": {
+          "lab-notifications.color": {
             "type": "string",
             "description": "Icon's color when there are some notifications",
             "default": ""
           },
-          "gitlab-notifications.hideIfNone": {
+          "lab-notifications.hideIfNone": {
             "type": "boolean",
             "description": "Hide the icon if there are no notifications",
             "default": true
           },
-          "gitlab-notifications.showNumberOfNotifications": {
+          "lab-notifications.showNumberOfNotifications": {
             "type": "boolean",
             "description": "Show the number of notifications alongside the icon",
             "default": true
           },
-          "gitlab-notifications.url": {
+          "lab-notifications.url": {
             "type": "string",
             "description": "Gitlab URL",
             "default": "https://gitlab.com/"
@@ -80,18 +80,18 @@
     ],
     "commands": [
       {
-        "command": "gitlab-notifications.refresh",
-        "title": "Gitlab Notifications: Refresh"
+        "command": "lab-notifications.refresh",
+        "title": "Lab Notifications: Refresh"
       },
       {
-        "command": "gitlab-notifications.openInBrowser",
-        "title": "Gitlab Notifications: Open in Browser"
+        "command": "lab-notifications.openInBrowser",
+        "title": "Lab Notifications: Open in Browser"
       }
     ],
     "menus": {
       "commandPalette": [
         {
-          "command": "gitlab-notifications.openInBrowser",
+          "command": "lab-notifications.openInBrowser",
           "when": "false"
         }
       ]
@@ -101,14 +101,14 @@
     "vscode:prepublish": "webpack --mode production",
     "compile": "webpack --mode none",
     "watch": "webpack --mode none --watch",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "pify": "^6.0.0",
+    "pify": "^5.0.0",
     "request": "^2.81.0",
-    "snyk": "^1.316.1"
+    "@snyk/protect": "^1.657.0"
   },
   "devDependencies": {
     "@types/mocha": "10.0.1",

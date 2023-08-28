@@ -22,14 +22,14 @@ class Statusbar {
         const alignment = config.alignment === 'left' ? vscode.StatusBarAlignment.Left : vscode.StatusBarAlignment.Right;
         this.bell = vscode.window.createStatusBarItem(alignment, -Infinity);
         this.bell.text = `$(tasklist)`;
-        this.bell.command = 'gitlab-notifications.openInBrowser';
+        this.bell.command = 'lab-notifications.openInBrowser';
     }
 
     async update(force?: boolean) {
         this.config = Config.get();
-        this.token = this.config.privateToken || process.env.GITLAB_NOTIFICATIONS_TOKEN;
+        this.token = this.config.privateToken || process.env.LAB_NOTIFICATIONS_TOKEN || process.env.GITLAB_NOTIFICATIONS_TOKEN;
         if (!this.token) {
-            return vscode.window.showErrorMessage('You need to provide a private token via the "gitlab-notifications.privateToken" setting or the "GITLAB_NOTIFICATIONS_TOKEN" environment variable');
+            return vscode.window.showErrorMessage('You need to provide a private token via the "lab-notifications.privateToken" setting or the "LAB_NOTIFICATIONS_TOKEN" environment variable');
         }
         await this.updateState(force);
         this.updateText();
