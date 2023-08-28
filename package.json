@@ -101,14 +101,14 @@
     "vscode:prepublish": "webpack --mode production",
     "compile": "webpack --mode none",
     "watch": "webpack --mode none --watch",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk-protect",
     "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "lodash": "^4.17.11",
     "pify": "^6.0.0",
     "request": "^2.81.0",
-    "snyk": "^1.316.1"
+    "@snyk/protect": "^1.657.0"
   },
   "devDependencies": {
     "@types/mocha": "10.0.1",
