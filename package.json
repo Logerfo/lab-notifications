@@ -106,7 +106,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "pify": "^5.0.0",
+    "pify": "^6.0.0",
     "request": "^2.81.0",
     "@snyk/protect": "^1.657.0"
   },
